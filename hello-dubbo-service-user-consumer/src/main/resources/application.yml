@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: hello-dubbo-service-user-consumer
+server:
+  port: 9090
+user:
+  service:
+    version: 1.0.0
+dubbo:
+  scan:
+    basePackages: com.mu.hellodubboserviceuserconsumer
+  application:
+    id: hello-dubbo-service-user-consumer
+    name: hello-dubbo-service-user-consumer
+    qos-port: 22223
+    qos-enable: true
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12346
+    status: server
+  registry:
+    id: zookeeper
+    address: zookeeper://192.168.0.126:2181?backup=192.168.0.126:2182,192.168.0.126:2183
+
